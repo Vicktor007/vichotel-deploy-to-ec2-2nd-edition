@@ -32,4 +32,4 @@ jobs:
       - name: Delete old container
         run: docker rm -f ec-new-container
       - name: Run docker container
-        run: docker run -d -p 8082:8080 --name ec-new-container victor140/ec-new
+        run: docker run -d -p 8082:8080 --name ec-new-container victor140/ec-new:new
