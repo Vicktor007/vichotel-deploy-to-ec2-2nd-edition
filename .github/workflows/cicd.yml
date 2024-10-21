@@ -10,9 +10,9 @@ jobs:
     runs-on: [ubuntu-latest]
     steps:
       - name: Checkout source
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Setup Java
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
           java-version: '17'
@@ -34,4 +34,4 @@ jobs:
       - name: Delete old container
         run: docker rm -f ec-new-container
       - name: Run docker container
-        run: docker run -d -p 8080:8080 --name ec-new-container victor140/ec-new
+        run: docker run -d -p 8082:8080 --name ec-new-container victor140/ec-new
